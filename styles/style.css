@@ -1,0 +1,1241 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+
+
+
+}
+/* Estilos de grillas principales de las secciones  */
+
+.gridSection {
+    display: grid;
+    grid-template-columns: 28% auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        'header header'
+        'side_bar main_content'
+        'footer footer';
+
+
+}
+
+.gridMainIndex {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        'header header'
+        'mainContentIndex mainContentIndex'
+        'footer footer';
+
+}
+
+.gridSectionContact {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        'header '
+        'mainContentContact'
+        'footer';
+
+}
+
+/* Estilos de Header */
+
+
+.header {
+    z-index: 10;
+    height: 3.125em;
+    margin: -3px;
+    grid-area: header;
+    position: sticky;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.864);
+    backdrop-filter: blur(2px);
+    -webkit-box-shadow: -2px 8px 17px -15px rgba(66, 68, 90, 0.77);
+    -moz-box-shadow: -2px 8px 17px -15px rgba(66, 68, 90, 0.77);
+    box-shadow: -2px 8px 17px -15px rgba(66, 68, 90, 0.77);
+
+}
+
+
+.headerBox {
+    display: flex;
+    justify-content: space-evenly;
+
+
+
+}
+
+.listNav li {
+    font-size: 13pt;
+    color: aliceblue;
+    display: inline-flex;
+    margin-left: 0.625em;
+    margin-top: 0.75em;
+
+
+
+
+}
+
+.listNav li :link {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 1s
+}
+
+.listNav li :visited {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 1s
+}
+
+.listNav li :hover {
+    color: #c5c5c5;
+    transform: scale(1.2);
+    transition: 1s;
+    
+}
+
+.headerLogo {
+    height: 1.875em;
+    margin-top: 0.5625em;
+
+}
+
+.navIcons {
+    display: inline-flex;
+    margin-right: 1.25em;
+}
+
+.carrito {
+    height: 1.25em;
+    margin-top: 0.75em;
+    transition: 1s
+}
+
+.carrito:hover {
+    transform: scale(1.3);
+
+
+}
+
+.favorito {
+    height: 1.125em;
+    margin-top: 0.875em;
+    margin-right: 1em;
+    transition: 1s;
+}
+
+.favorito:hover {
+    transform: scale(1.2);
+
+
+}
+
+.menuMobile {
+    height: 1.0625em;
+    margin-top: 0.9375em;
+    margin-left: 1.125em;
+    display: none;
+}
+
+/* Estilos de secciones principales  */
+
+.mainContent {
+
+    background-color: rgba(203, 203, 203, 0.304);
+    grid-area: main_content;
+}
+
+.mainContentIndex {
+    grid-area: mainContentIndex;
+
+}
+
+.mainContact {
+    grid-area: mainContentContact;
+}
+
+.conteiner {
+    width: 61.875em;
+    height: 100%;
+    background-color: #ffffff;
+
+
+
+
+}
+/* Estilos de titulos de las distintas secciones */
+
+.sectionTitleDiv {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.sectionTitle {
+    margin-top: 1.125em;
+
+
+}
+
+.sectionTitleDivW {
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.sectionTitleW {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.sectionTitleDivC {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+
+
+}
+
+.sectionTitleC {
+    color: #272727;
+    font-size: 25pt;
+
+}
+
+
+/* Estilos banner main */
+
+@keyframes bannerAnimation {
+    from {background-image: url("../media/banner.jpg");}
+    to {background-image: url("../media/banner5.jpg")}
+  }
+
+.mainBanner {
+    
+    height: 31.25em;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3.125em 1.875em;
+    margin-bottom: 1.25em;
+    animation-name: bannerAnimation;
+    animation-duration: 7s;
+    animation-delay: 1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+.mobileBanner {
+    display: none;
+}
+
+/* Estilos logos de main */
+
+
+.mainLogos {
+    display: flex;
+    justify-content: center;
+
+}
+
+.mainLogos img {
+    width: 12.5em;
+
+}
+/* Estilos categorias de main */
+
+.mainCategories {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    column-gap: 1.25em;
+    justify-content: center;
+    margin-top: 1.5625em;
+    margin-bottom: 1.5625em;
+
+
+}
+
+.category1 {
+    display: flex;
+    width: 18.75em;
+    height: 21.875em;
+    background-image: url(../media/category1.jpg);
+    background-color: rgba(94, 94, 94, 0.534);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.25em;
+    transition: 1s;
+
+
+}
+
+.category1:hover {
+    background-color: rgba(186, 186, 186, 0.534);
+
+
+}
+
+.category2 {
+    display: flex;
+    width: 18.75em;
+    height: 21.875em;
+    background-image: url(../media/category2.jpg);
+    background-color: rgba(78, 78, 78, 0.537);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.25em;
+    transition: 1s;
+
+
+}
+
+.category2:hover {
+    background-color: rgba(186, 186, 186, 0.534);
+
+
+}
+
+.category3 {
+    display: flex;
+    width: 18.75em;
+    height: 21.875em;
+    background-image: url(../media/category3.jpg);
+    background-color: rgba(94, 94, 94, 0.534);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.25em;
+    transition: 1s;
+
+
+}
+
+.category3:hover {
+    background-color: rgba(186, 186, 186, 0.534);
+
+
+}
+
+
+.categoryContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+
+
+}
+
+.categoryTitle {
+    font-size: 19pt;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgb(29, 29, 29);
+    color: rgb(255, 255, 255);
+}
+
+.categorySubTitle {
+    line-height: 14pt;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgb(29, 29, 29);
+    color: rgb(255, 255, 255);
+
+
+}
+
+.categoryButton {
+    width: 9.375em;
+    height: 2.5em;
+    margin-top: 0.625em;
+    background-color: #ffffff79;
+    border: none;
+    font-size: 12pt;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgb(29, 29, 29);
+    color: rgb(255, 255, 255);
+}
+
+.categoryButton a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+
+.categoryButton a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
+}
+
+
+
+
+/* Estilos productos de secciones Tienda Hombres y Mujeres */
+
+.productContainerSection {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    column-gap: 20px;
+    justify-content: center;
+
+
+
+}
+
+.productBoxSection {
+    width: 12em;
+    height: 20em;
+    background-color: rgba(233, 233, 233, 0.304);
+    border-radius: 0.75em;
+    padding: 0.625em;
+    margin-bottom: 1.875em;
+
+
+
+
+}
+
+.productImageSection {
+    width: 11.25em;
+    margin-left: 0.5em;
+
+}
+
+.producTitleSection {
+    font-size: 14pt;
+}
+
+.productCategorySection {
+    margin-top: -8px;
+    font-weight: lighter;
+
+}
+
+.productstarsSection {
+    width: 6.25em;
+}
+
+/* Estilos productos Main */
+
+.featuredTitleDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5625em;
+}
+.productBox {
+    width: 12em;
+    height: 20em;
+    background-color: rgba(233, 233, 233, 0.304);
+    border-radius: 0.75em;
+    padding: 0.625em;
+    margin-bottom: 1.875em;
+    transition: 1s;
+
+
+}
+
+.featuredBox {
+    display: flex;
+    column-gap: 1.25em;
+}
+
+.ofert{
+    font-size: 12pt;
+    text-decoration: line-through;
+    color: #6e6e6e;
+}
+
+.productFeatured {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+
+}
+
+.featuredBox a:link {
+    text-decoration: none;
+    color: rgb(38, 38, 38);
+}
+
+.featuredBox a:visited {
+    text-decoration: none;
+    color: rgb(38, 38, 38);
+}
+
+.featuredProductConteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.125em;
+}
+
+.featuresTitle {
+    font-weight: 600;
+    line-height: 1.0625em;
+    text-align: center;
+    justify-items: center;
+}
+.productContainer {
+    display: grid;
+    grid-template-columns: 22% 22% 22%;
+    grid-template-rows: auto auto auto auto auto;
+
+
+
+}
+
+
+.productBox:hover {
+    transform: scale(1.1);
+
+}
+
+.productImage {
+    width: 11.25em;
+    margin-left: 0.5em;
+
+}
+
+.producTitle {
+    font-size: 14pt;
+}
+
+.productCategory {
+    margin-top: -8px;
+    font-weight: lighter;
+
+}
+
+.productstars {
+    width: 6.25em;
+}
+
+/* Banner de mobile */
+
+.secondBanner {
+    background-image: url("../media/banner4.jpg");
+    height: 37.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3.125em 1.875em;
+    margin-top: 1.875em;
+}
+
+
+
+
+/* Estilos barra de busqueda mobile en header */
+
+
+.secondBar {
+    display: flex;
+    justify-content: center;
+}
+
+.searchBarMobile {
+    display: none;
+    float: right;
+    padding-right: 500px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.0625em;
+    }
+
+.searchMobile {
+    display: none;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.searchButtonMobile {
+    display: none;
+    width: 2em;
+    height: 2em;
+    border: none;
+    margin-left: -45px;
+    margin-top: 4px;
+    background-color: white;
+
+}
+
+.filterIcon {
+    display: none;
+    width: 40px;
+    margin-left: 30px;
+    margin-top: 3px;
+}
+/* Estilos side bar */
+
+.sideBar {
+    display: flex;
+    justify-content: end;
+    grid-area: side_bar;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.sideBarConteiner {
+    background-color: rgba(203, 203, 203, 0.304);
+    box-shadow: 1px 1px 3px rgba(106, 106, 106, 0.312);
+
+
+}
+
+/* Estilos barra de busqueda de sidebar */
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3.125em;
+    margin-left: 0.9375em;
+}
+
+.searchButton {
+    width: 3em;
+    height: 2em;
+    border: none;
+    background-color: #ffffff00;
+
+}
+
+.divSearchIcon {
+    width: 2em;
+
+}
+
+
+.searchBar {
+    float: right;
+    padding: 0.375em;
+    border: none;
+    font-size: 1.0625em;
+}
+
+.searchBar:focus {
+    background-color: rgb(255, 255, 255);
+    outline: none;
+
+}
+
+
+/* Estilos productos destacados barra lateral de secciones */
+
+.productBoxSide {
+    width: 10em;
+    height: 15em;
+    border-radius: 0.75em;
+    background-color: #ffffff;
+    padding: 0.625em;
+    margin-top: 1.25em;
+    margin-bottom: -1.25em;
+    transform: scale(0.9);
+    box-shadow: 1px 1px 3px rgba(128, 128, 128, 0.41);
+
+
+}
+
+.productImageSide {
+    width: 8.25em;
+    margin-left: 14px;
+
+}
+
+.producTitleSide {
+    font-size: 12pt;
+    margin-left: 14px;
+}
+
+.productCategorySide {
+    margin-top: -0.5em;
+    font-weight: lighter;
+    font-size: 11pt;
+    margin-left: 14px;
+
+}
+
+.productPriceSide {
+    margin-left: 14px;
+
+}
+
+.productStarsSide {
+    width: 5em;
+    margin-left: 14px;
+}
+
+/* Estilos formulario pagina de contacto */
+
+.formTitle {
+    font-weight: 800;
+    color: #454545;
+    margin-bottom: 20px;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+
+}
+
+.contact_form {
+    width: 460px;
+    height: auto;
+    border-radius: 10px;
+    border: solid 1px #272727;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: rgba(237, 237, 237, 0.283);
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+.form input {
+
+    background-color: white;
+    width: 408px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #272727;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.form textarea {
+
+    background-color: #ffffff;
+    width: 405px;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #272727;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+.form button {
+
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: #272727;
+    ;
+    border-color: #272727;
+    ;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+/* Estilos footer */
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 8.5em;
+    background-color: rgb(37, 37, 37);
+}
+.footerImg{
+    width: 300px;
+}
+.footerText{
+    color: #ffffff;
+    font-size: 10pt;
+    margin-top: 18px;
+}
+
+
+
+/* Media queries para mobile */
+
+@media (max-width: 576px) {
+    .header {
+
+        height: 250px;
+        grid-area: header;
+        position: sticky;
+        top: 0px;
+        background: rgba(0, 0, 0, 0.864);
+        backdrop-filter: blur(2px);
+        -webkit-box-shadow: -2px 8px 17px -15px rgba(66, 68, 90, 0.77);
+        -moz-box-shadow: -2px 8px 17px -15px rgba(66, 68, 90, 0.77);
+        box-shadow: -2px 8px 17px -15px rgba(66, 68, 90, 0.77);
+
+    }
+
+
+    .headerBox {
+        display: flex;
+        justify-content: space-between;
+
+
+
+    }
+
+    .navMenu {
+        display: none;
+    }
+
+    .headerLogo {
+        height: 80px;
+        margin-top: 20px;
+        margin-left: 30px;
+
+    }
+
+    .navIcons {
+        display: inline-flex;
+        margin-right: 1.25em;
+        margin-top: 24px;
+    }
+
+    .carrito {
+        height: 45px;
+        margin-top: 0.75em;
+
+    }
+
+
+
+    .favorito {
+        height: 45px;
+        margin-top: 0.875em;
+        margin-right: 1em;
+
+    }
+
+
+
+    .menuMobile {
+        display: flex;
+        height: 40px;
+        margin-top: 18px;
+        margin-right: 20px;
+
+
+    }
+
+    .secondBar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .searchBarMobile {
+        display: flex;
+        padding-right: 480px;
+        padding-left: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: none;
+        border-radius: 15px;
+        font-size: 1.0625em;
+        font-size: 22pt;
+    }
+
+    .searchMobile {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+    }
+
+    .searchButtonMobile {
+        display: flex;
+        width: 2em;
+        height: 2em;
+        border: none;
+        margin-left: -65px;
+        margin-top: 10px;
+        background-color: #ffffff;
+
+
+    }
+
+    .filterIcon {
+        display: flex;
+        width: 60px;
+        margin-left: 50px;
+        margin-top: 7px;
+    }
+
+    .divSearchIcon {
+        width: 4em;
+
+
+    }
+
+    .mainBanner {
+        display: none;
+    }
+
+    .mobileBanner {
+        display: flex;
+
+    }
+
+    .mobileBannerImg {
+        width: 100%;
+
+    }
+
+    .mainCategories {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        row-gap: 1.25em;
+        justify-content: center;
+        margin-top: 1.5625em;
+        margin-bottom: 1.5625em;
+
+    }
+
+    .category1 {
+        display: flex;
+        width: 48.75em;
+        height: 21.875em;
+        background-image: url(../media/category1.jpg);
+        background-color: rgba(94, 94, 94, 0.534);
+        background-blend-mode: multiply;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 1.25em;
+
+
+    }
+
+    .category2 {
+        display: flex;
+        width: 48.75em;
+        height: 21.875em;
+        background-image: url(../media/category2mobile.jpg);
+        background-color: rgba(94, 94, 94, 0.534);
+        background-blend-mode: multiply;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 1.25em;
+
+
+    }
+
+    .category3 {
+        display: flex;
+        width: 48.75em;
+        height: 21.875em;
+        background-image: url(../media/category3.jpg);
+        background-color: rgba(94, 94, 94, 0.534);
+        background-blend-mode: multiply;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 1.25em;
+
+
+    }
+
+    .categoryContent {
+        margin-left: 10px;
+    }
+
+    .categoryTitle {
+        font-size: 40pt;
+        font-weight: 500;
+        text-shadow: 1px 1px 4px rgb(29, 29, 29);
+        color: rgb(255, 255, 255);
+    }
+
+    .categorySubTitle {
+        font-size: 25pt;
+        line-height: 28pt;
+        font-weight: 500;
+        text-shadow: 1px 1px 4px rgb(29, 29, 29);
+        color: rgb(255, 255, 255);
+
+
+    }
+
+    .categoryButton {
+        width: 250px;
+        height: 80px;
+        margin-top: 0.625em;
+        background-color: #ffffff79;
+        border: none;
+        font-size: 20pt;
+        font-weight: 500;
+        text-shadow: 1px 1px 4px rgb(29, 29, 29);
+        color: rgb(255, 255, 255);
+    }
+
+    .sectionTitle {
+        font-size: 30pt;
+        margin-top: 18px;
+
+
+    }
+
+    .featuredBox {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+
+    }
+
+    .productBox {
+        width: 350px;
+        height: 500px;
+        background-color: rgba(233, 233, 233, 0.304);
+        border-radius: 0.75em;
+        padding: 0.625em;
+        margin-top: 1.25em;
+        margin-bottom: 1.875em;
+
+
+
+
+    }
+
+    .productImage {
+        width: 300px;
+        margin-left: 25px;
+
+
+    }
+
+    .producTitle {
+        font-size: 24pt;
+    }
+
+    .productCategory {
+        font-size: 20pt;
+        margin-top: -8px;
+        font-weight: lighter;
+
+    }
+
+    .productprice {
+        font-size: 20pt;
+    }
+
+    .productstars {
+        width: 180px;
+    }
+
+    .sideBar {
+        display: none;
+    }
+
+    .gridMain {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            'header header'
+            'main_content main_content'
+            'footer footer';
+
+
+    }
+
+    .productContainerSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 30px;
+
+    }
+
+    .productBoxSection {
+        grid-area: main_content;
+        width: 800px;
+        height: 1200px;
+        background-color: rgba(202, 202, 202, 0.473);
+        border-radius: 0.75em;
+        padding: 0.625em;
+        margin-bottom: 100px;
+    }
+
+    .productImageSection {
+        width: 700px;
+        margin-left: 45px;
+        margin-top: 40px;
+
+
+    }
+
+    .producTitleSection {
+        font-size: 44pt;
+    }
+
+    .productCategorySection {
+        margin-top: -8px;
+        font-weight: lighter;
+        font-size: 38pt;
+
+    }
+
+    .productstarsSection {
+        width: 17.25em;
+    }
+
+    .productpriceSection {
+        font-size: 40pt;
+    }
+
+    .sectionTitleDivW {
+        display: flex;
+        justify-content: center;
+        margin-right: 50px;
+    }
+
+    .sectionTitleW {
+        font-size: 70pt;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        color: #272727;
+    }
+
+    .productTextBoxS {
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+
+    .formTitle {
+        font-size: 30pt;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 200px;
+
+    }
+
+    .contact_form {
+        width: 860px;
+        height: auto;
+        border-radius: 10px;
+        border: solid 1px #272727;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        background-color: rgba(237, 237, 237, 0.283);
+        padding-left: 30px;
+        margin-top: 20px;
+    }
+
+    .form input {
+        background-color: #ffffff;
+        width: 808px;
+        height: 80px;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #272727;
+        margin-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        font-size: 25pt;
+    }
+
+    .form textarea {
+        background-color: #ffffff;
+        width: 808px;
+        height: 600px;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #272727;
+        margin-top: 10px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        padding-top: 15px;
+        font-size: 25pt;
+    }
+
+    .form button {
+        height: 90px;
+        width: 620px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 80px;
+        margin-top: 10px;
+        text-transform: uppercase;
+        background-color: #272727;
+        border-color: #272727;
+        border-style: solid;
+        border-radius: 10px;
+        cursor: pointer;
+        color: white;
+        font-size: 25pt;
+    }
+
+    .sectionTitleC {
+        color: #272727;
+        font-size: 50pt;
+
+    }
+
+    .footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        background-color: rgb(37, 37, 37);
+    }
+       
+    .footerImg{
+        width: 800px;
+    }
+    .footerText{
+        color: #ffffff;
+        font-size: 25pt;
+        margin-top: 18px;
+    }
+
+    
+}
